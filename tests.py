@@ -4,7 +4,6 @@ Calificación del laboratorio
 """
 
 import sys
-from fuzzywuzzy import fuzz, process
 import pregunta
 
 
@@ -1463,15 +1462,15 @@ def test_09():
 
 
 test = {
-    "01": test_01,
-    "02": test_02,
-    "03": test_03,
-    "04": test_04,
-    "05": test_05,
-    "06": test_06,
-    "07": test_07,
-    "08": test_08,
-    "09": test_09,
-}[sys.argv[1]]
+     "01": test_01,
+     "02": test_02,
+     "03": test_03,
+     "04": test_04,
+     "05": test_05,
+     "06": test_06,
+     "07": test_07,
+     "08": test_08,
+     "09": test_09,
+ }[sys.argv[1]]
 
 test()
