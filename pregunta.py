@@ -22,6 +22,7 @@ def clean_data():
     df_clean.barrio = df_clean.barrio.str.replace('-',' ')
     df_clean.barrio = df_clean.barrio.str.replace('_',' ')
     df_clean.barrio = df_clean.barrio.str.strip()
+    df_clean.barrio = df_clean.barrio.str.replace(' ','_')
     df_clean.barrio = df_clean.barrio.str.lower()
     dict_barrio = {'antonio nari¿o': 'antonio nariño', 'bel¿n': 'belen'}
     df_clean.barrio.replace(dict_barrio, inplace = True, regex = True)
@@ -58,7 +59,7 @@ def clean_data():
         return df_clean_fecha
 
     df_clean.fecha_de_beneficio = df_clean.fecha_de_beneficio.map(fecha)
-    
+
     df_clean = df_clean.drop_duplicates(keep='last')
 
     return df_clean
