@@ -4,7 +4,7 @@ Calificación del laboratorio
 """
 
 import sys
-
+from fuzzywuzzy import fuzz, process
 import pregunta
 
 
