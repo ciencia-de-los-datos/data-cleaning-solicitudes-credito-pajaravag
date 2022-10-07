@@ -20,12 +20,9 @@ def clean_data():
     df_clean.tipo_de_emprendimiento = df_clean.tipo_de_emprendimiento.str.lower()
     ####################
     df_clean.barrio = df_clean.barrio.str.replace('-',' ')
-    df_clean.barrio = df_clean.barrio.str.replace('_',' ')
-    df_clean.barrio = df_clean.barrio.str.strip()
     df_clean.barrio = df_clean.barrio.str.replace(' ','_')
     df_clean.barrio = df_clean.barrio.str.lower()
-    dict_barrio = {'antonio nari¿o': 'antonio nariño', 'bel¿n': 'belen'}
-    df_clean.barrio.replace(dict_barrio, inplace = True, regex = True)
+  
     ##############
     df_clean.idea_negocio = df_clean.idea_negocio.str.replace('-',' ')
     df_clean.idea_negocio = df_clean.idea_negocio.str.replace('_',' ')
